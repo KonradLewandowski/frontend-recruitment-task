@@ -1,12 +1,18 @@
 @use "variables" as v;
 
-@use "../components/button/button.styles.scss" as buttonStyle;
+@use "../components/alert/alert.styles.scss" as layoutStyle;
+@use "../components/imageContainer/imageContainer.styles.scss" as imageHeroStyle;
+@use "../components/contentContainer/contentContainer.styles.scss" as contentStyle;
 
 * {
   box-sizing: border-box;
 }
 body {
   background: v.$primary-color;
+}
+h1 {
+  padding: 0;
+  margin: 0;
 }
 
 .bg-container {
@@ -16,65 +22,27 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 95px;
-
+  gap: v.$great-gap;
+  @media only screen and (max-width: v.$great-resolution) {
+    & {
+      gap: v.$medium-gap !important;
+      padding: v.$depend-padding;
+    }
+  }
   .sm-container {
     max-width: 505px;
     max-height: 330px;
   }
+
   .image-hero {
-    // margin: auto 0;
-    & img {
-      width: 100%;
-      height: 100%;
-    }
+    @include imageHeroStyle.imageHeroStyle;
   }
 
   .content {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    .section {
-      display: grid;
-      gap: 24px;
-      grid-template-rows: repeat(2, 1fr);
-
-      .title {
-        font-family: v.$font;
-
-        font-weight: v.$bold-font;
-        font-size: v.$big-font;
-        line-height: 120%;
-        align-self: flex-end;
-      }
-      .text {
-        max-width: 380px;
-        font-family: v.$font;
-        font-weight: v.$normal-font;
-        font-size: v.$small-font;
-        line-height: 150%;
-      }
-    }
-    & > button {
-      @include buttonStyle.buttonStyle;
-    }
+    @include contentStyle.contentStyle;
   }
 }
 .layout {
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: rgba(12, 12, 12, 0.5);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .alert-container {
-    background: v.$primary-color;
-    width: 920px;
-    height: 210px;
-  }
+  @include layoutStyle.layoutStyle;
+  // display: none;
 }

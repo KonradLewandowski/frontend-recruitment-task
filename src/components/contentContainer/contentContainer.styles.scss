@@ -1,1 +1,46 @@
 @use "../../scss/variables.scss" as v;
+@use "../button/button.styles.scss" as buttonStyle;
+
+@mixin contentStyle {
+  display: flex;
+  flex-direction: column;
+  gap: v.$big-gap;
+
+  @media only screen and (max-width: v.$great-resolution) {
+    & {
+      text-align: center;
+      align-items: center;
+    }
+    > .section {
+      display: flex !important;
+      flex-direction: column;
+      .title {
+        align-self: center !important;
+      }
+    }
+  }
+
+  .section {
+    display: grid;
+    gap: v.$medium-gap;
+    grid-template-rows: repeat(2, 1fr);
+
+    .title {
+      font-family: v.$font;
+      font-weight: v.$bold-font;
+      font-size: v.$big-font;
+      line-height: v.$line-height-medium;
+      align-self: flex-end;
+    }
+    .text {
+      max-width: 380px;
+      font-family: v.$font;
+      font-weight: v.$normal-font;
+      font-size: v.$small-font;
+      line-height: v.$line-height-big;
+    }
+  }
+  & > #btn-counter {
+    @include buttonStyle.buttonStyle;
+  }
+}

@@ -16,26 +16,42 @@
         <img
           src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"
           srcset="
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1x,
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg  2x
+            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1400w,
+            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1394w,
+            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1234w,
+            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1002w,
+            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg   784w,
+            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg  480w
           "
+          alt="beach"
         />
       </div>
       <div class="content sm-container">
         <div class="section">
-          <div class="title">Lorem Ipsum</div>
-          <div class="text">
+          <h1 class="title">Lorem Ipsum</h1>
+          <article class="text">
             Infinitely scalable, feature-rich and cloud-native data management and
             protection for modern and legacy infrastructures and SaaS platforms, managed
             via a single app with no hardware required.
-          </div>
+          </article>
         </div>
-        <button>Button</button>
+        <button id="btn-counter">Button</button>
       </div>
     </div>
-    <!-- layout -->
-    <!-- <div class="layout">
-      <div class="alert-container"></div>
-    </div> -->
+    <!-- LAYOUT -->
+    <div class="layout">
+      <div class="alert-container">
+        <div class="left-side">
+          <h1 class="title">Alert!</h1>
+          <article class="text">
+            You have clicked <span class="counter">X times</span> to related button.
+          </article>
+        </div>
+        <div class="right-side">
+          <button id="btn-close"></button>
+          <button id="btn-reset">Reset</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
