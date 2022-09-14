@@ -31,9 +31,7 @@ popUp.addEventListener("click", (e) => {
   if (e.currentTarget === e.target) popUp.style.display = "none";
 });
 
-buttonClose.addEventListener("click", () => {
-  popUp.style.display = "none";
-});
+buttonClose.addEventListener("click", () => (popUp.style.display = "none"));
 
 buttonReset.addEventListener("click", () => {
   state.updateCounter(0);
