@@ -86,12 +86,11 @@
         justify-self: flex-end;
 
         border: none;
-        // background: none;
-        background-color: red;
+        background: none;
 
         &:hover {
           cursor: pointer;
-          // padding: 10px;
+          background-color: red;
         }
 
         &:after {
@@ -100,8 +99,7 @@
           border-left: 2px solid rgb(0, 0, 0);
           position: absolute;
           transform: rotate(45deg);
-
-          // top: calc(-1 * v.$close-size / 5);
+          top: 0;
         }
 
         &:before {
@@ -110,8 +108,7 @@
           border-left: 2px solid rgb(0, 0, 0);
           position: absolute;
           transform: rotate(-45deg);
-
-          top: calc(-1 * v.$close-size / 5);
+          top: 0;
         }
       }
       & > #btn-reset {

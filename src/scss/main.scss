@@ -44,5 +44,5 @@ h1 {
 }
 .layout {
   @include layoutStyle.layoutStyle;
-  // display: none;
+  display: none;
 }
