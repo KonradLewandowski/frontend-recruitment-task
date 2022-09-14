@@ -14,18 +14,36 @@
   <body>
     <div class="bg-container">
       <div class="image-hero sm-container">
-        <img
-          src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"
-          srcset="
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1400w,
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1394w,
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1234w,
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1002w,
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg   784w,
-            images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg  480w
-          "
-          alt="beach"
-        />
+        <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg"
+          />
+          <source
+            media="(max-width: 784px)"
+            srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg"
+          />
+          <source
+            media="(max-width: 1002px)"
+            srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg"
+          />
+          <source
+            media="(max-width: 1234px)"
+            srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1234.jpg"
+          />
+          <source
+            media="(max-width: 1394px)"
+            srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1394.jpg"
+          />
+          <source
+            media="(max-width: 1400px)"
+            srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"
+          />
+          <img
+            src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"
+            alt="beach"
+          />
+        </picture>
       </div>
       <div class="content sm-container">
         <div class="section">
